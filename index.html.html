@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NJERA — Your people. Your games. Your vibe.</title>
+<style>
+:root{--navy:#101b45;--pink:#e81783;--muted:#73788c;--line:#e8e8ee;--bg:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--navy);font-family:Arial,Helvetica,sans-serif}
+.wrap{max-width:1120px;margin:auto;padding:0 28px}header{height:88px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:900;font-size:27px;font-style:italic;letter-spacing:-1px}.brand span{color:#aaa;margin-right:12px}a{color:inherit;text-decoration:none}.playnow{font-weight:700;color:#999}
+.hero{padding:54px 0 36px;max-width:720px}.hero h1{font-size:clamp(42px,7vw,68px);line-height:.88;letter-spacing:-2px;font-weight:1000;font-style:italic;margin:0 0 12px}.hero h1 span{color:var(--pink)}.hero p{font-size:17px;line-height:1.55;margin:0 0 24px;max-width:450px}
+.search{width:min(100%,520px);padding:16px;border:1px solid var(--line);border-radius:15px;font-size:15px;outline:none}.search:focus{border-color:var(--pink)}
+.filters{display:flex;gap:34px;flex-wrap:wrap;padding:24px 0 48px;color:var(--navy);font-weight:600}.filters button{border:0;background:none;color:inherit;font:inherit;cursor:pointer;padding:0}.filters button.active{color:#aaa}
+.daily{border:1.5px solid var(--pink);border-radius:22px;padding:24px;margin-bottom:30px}.eyebrow{font-weight:900;font-size:17px;margin:0 0 14px}.daily p{font-size:20px;margin:0 0 24px}.daily button,.card button{border:0;background:none;color:#aaa;font-weight:700;font-size:14px;cursor:pointer}
+h2{font-size:22px;margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px;padding-bottom:64px}.card{border:1px solid var(--line);border-radius:22px;min-height:270px;padding:24px 22px;box-shadow:0 9px 24px rgba(16,27,69,.07);display:flex;flex-direction:column}.art{height:82px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:22px;font-weight:1000;font-style:italic;color:var(--navy);letter-spacing:-.5px}.card:nth-child(odd) .art{color:#aaa}.card h3{font-size:20px;margin:10px 0 10px}.tag{color:var(--pink);font-size:14px;font-weight:700;margin:0 0 9px}.desc{color:var(--muted);font-size:16px;line-height:1.45;margin:0 0 18px}.card button{margin-top:auto;align-self:center;padding:6px 18px}footer{padding:18px 24px 55px;color:#aaa;font-size:14px;line-height:1.6}
+@media(max-width:620px){.wrap{padding:0 22px}.hero{padding-top:40px}.filters{gap:22px;padding-bottom:38px}.grid{gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:18px 15px;min-height:270px}.card h3{font-size:17px}.desc{font-size:14px}.art{font-size:17px;height:78px}}
+@media(max-width:390px){.grid{grid-template-columns:1fr}.card{min-height:230px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="#top"><span>N</span>NJERA</a><a class="playnow" href="#games">Play now</a></header>
+<main id="top">
+<section class="hero"><h1>YOUR PEOPLE.<br>YOUR GAMES.<br><span>YOUR VIBE.</span></h1><p>Karibu NJERA. Pick a game, add your friends’ names, pass the phone around and let the chaos begin.</p><input class="search" id="search" type="search" placeholder="Search games, e.g. truth, song, sheng" aria-label="Search games"></section>
+<nav class="filters" aria-label="Game categories"><button class="active" data-filter="All">All</button><button data-filter="Social">Social</button><button data-filter="Music">Music</button><button data-filter="Trivia">Trivia</button><button data-filter="Kenyan Culture">Kenyan Culture</button></nav>
+<section class="daily"><p class="eyebrow">Daily challenge</p><p>Never have I ever bought something just to impress people.</p><button onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})">Play Never Have I Ever</button></section>
+<h2 id="games">Playable now</h2>
+<section class="grid" id="grid">
+<article class="card" data-category="Social"><div class="art">NEVER HAVE I EVER</div><h3>Never Have I Ever</h3><p class="tag">Social</p><p class="desc">Ten fingers, Kenyan confessions. Who is lying?</p><button>Play</button></article>
+<article class="card" data-category="Social"><div class="art">TRUTH OR DARE</div><h3>Truth or Dare</h3><p class="tag">Social</p><p class="desc">Pick your poison. Four moods and a rotating spotlight.</p><button>Play</button></article>
+<article class="card" data-category="Kenyan Culture"><div class="art">KENYAN CHARADES</div><h3>Kenyan Charades</h3><p class="tag">Kenyan Culture</p><p class="desc">Act out matatu life, food and places before the timer ends.</p><button>Play</button></article>
+<article class="card" data-category="Social"><div class="art">WHO IS MOST LIKELY TO</div><h3>Who Is Most Likely To</h3><p class="tag">Social</p><p class="desc">Everyone votes. Someone gets exposed.</p><button>Play</button></article>
+<article class="card" data-category="Kenyan Culture"><div class="art">SHENG IMPOSTOR 🇰🇪</div><h3>Sheng Impostor 🇰🇪</h3><p class="tag">Kenyan Culture</p><p class="desc">One player has no clue about the Sheng word. Find them, or bluff to the end.</p><button>Play</button></article>
+<article class="card" data-category="Music"><div class="art">GUESS THE KENYAN SONG</div><h3>Guess the Kenyan Song</h3><p class="tag">Music</p><p class="desc">Text clues only, ten rounds, beat the clock.</p><button>Play</button></article>
+<article class="card" data-category="Trivia"><div class="art">HOW WELL DO YOU KNOW KENYA</div><h3>How Well Do You Know Kenya</h3><p class="tag">Trivia</p><p class="desc">Read the question, say your answer, then reveal it.</p><button>Play</button></article>
+<article class="card" data-category="Kenyan Culture"><div class="art">FINISH THE KENYAN SAYING</div><h3>Finish the Kenyan Saying</h3><p class="tag">Kenyan Culture</p><p class="desc">Complete the famous Swahili saying.</p><button>Play</button></article>
+<article class="card" data-category="Kenyan Culture"><div class="art">DECODE THE TEXT</div><h3>Decode the Text</h3><p class="tag">Kenyan Culture</p><p class="desc">Understand the Sheng message. Pick the right meaning.</p><button>Play</button></article>
+</section>
+</main>
+<footer>NJERA · Built in Kenya, made for everyone. Accounts, online rooms and leaderboards come in the next phases.</footer>
+</div>
+<script>
+const cards=[...document.querySelectorAll('.card')];let category='All';const search=document.getElementById('search');
+function filter(){const q=search.value.toLowerCase();cards.forEach(card=>{const matchesCategory=category==='All'||card.dataset.category===category;const matchesText=card.innerText.toLowerCase().includes(q);card.style.display=matchesCategory&&matchesText?'flex':'none'})}
+document.querySelectorAll('.filters button').forEach(button=>button.addEventListener('click',()=>{category=button.dataset.filter;document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active',b===button));filter()}));search.addEventListener('input',filter);
+</script>
+</body>
+</html>
